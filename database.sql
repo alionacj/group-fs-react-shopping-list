@@ -14,3 +14,6 @@ VALUES ('Bananas', 2, 'Bunches');
 
 INSERT INTO shoppinglist ("name", "quantity", "unit")
 VALUES ('Curry Paste', 1, 'Jar');
+
+INSERT INTO shoppinglist ("name", "quantity", "unit", "isPurchased")
+VALUES ('Potatoes', 5, 'Pounds', true);
