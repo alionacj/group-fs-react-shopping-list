@@ -61,6 +61,7 @@ router.put('/', (req,res) => {
 
 })
 
+//route to delete all items
 router.delete('/', (req,res) => {
     const sqlText = 
     `
@@ -68,6 +69,28 @@ router.delete('/', (req,res) => {
     `
 
     pool.query(sqlText)
+        .then((dbResult) => {
+            res.sendStatus(200)
+        })
+        .catch((dbError) => {
+            console.log(dbError);
+            res.sendStatus(500)
+        })
+}
+)
+
+//router to delete individual item
+router.delete('/:id', (req,res) => {
+    let id = req.params.id;
+    const sqlText = 
+        `
+        DELETE FROM shoppinglist
+        WHERE id = $1;
+        `
+    const sqlValues =
+        [id]
+
+    pool.query(sqlText, sqlValues)
         .then((dbResult) => {
             res.sendStatus(200)
         })

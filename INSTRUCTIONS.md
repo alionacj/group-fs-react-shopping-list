@@ -21,7 +21,7 @@ Each item can have a:
 - [X] Unit - text, allow up to 20 characters (optional)
 
 [X] When the page first loads, all the existing items should be displayed with the quantity & unit combined together for display.
-[ ] Each item should also have an option to remove it from the list 
+[X] Each item should also have an option to remove it from the list 
 [ ] or mark it as purchased. Once purchased, the buttons should be hidden and the item should show as "Purchased". 
 
 [X] Items should initially appear alphabetically, 
