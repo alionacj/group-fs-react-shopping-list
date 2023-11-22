@@ -16,7 +16,7 @@ function ClearButton ({getItems}) {
     }
 
     return(
-    <button onClick={Clear}>Clear</button>
+    <button className="btn btn-danger" onClick={Clear}>Clear</button>
     )
 }
 

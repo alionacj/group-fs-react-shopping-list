@@ -16,7 +16,7 @@ function ResetButton ({getItems}) {
     }
 
     return(
-    <button onClick={reset}>Reset</button>
+    <button className="btn btn-warning" onClick={reset}>Reset</button>
     )
 }
 

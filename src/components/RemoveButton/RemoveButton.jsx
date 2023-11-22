@@ -18,7 +18,7 @@ function RemoveButton ({id, getItems}) {
     }
 
     return(
-    <button onClick={Remove}>Remove</button>
+    <button className="btn btn-danger" onClick={Remove}>Remove</button>
     )
 }
 

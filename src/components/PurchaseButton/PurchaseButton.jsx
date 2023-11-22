@@ -17,7 +17,7 @@ function PurchaseButton({id, getItems, isPurchased}) {
             if(isPurchased){
             return <button disabled>Purchase</button>}
             else {
-            return <button onClick={purchaseItem}>Purchase</button>}
+            return <button className="btn btn-success" onClick={purchaseItem}>Purchase</button>}
 }
 
 export default PurchaseButton;

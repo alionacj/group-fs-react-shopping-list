@@ -34,8 +34,9 @@ function Form({getItems}) {
         <>
 
             <h2>Add an Item</h2>
+            <div className="input-group">
             <form onSubmit={addItem}>
-                <label>
+                <label className="row">
                     Item:
                     <input
                         type="text"
@@ -44,7 +45,8 @@ function Form({getItems}) {
                         onChange={(event) => setnewItemName(event.target.value)}
                     ></input>
                 </label>
-                <label>
+                <div className='row'>
+                <label className="col">
                     Quantity:
                     <input
                         type="number"
@@ -53,7 +55,8 @@ function Form({getItems}) {
                         onChange={(event) => setnewItemQuantity(event.target.value)}
                     ></input>
                 </label>
-                <label>
+                
+                <label className="col">
                     Unit:
                     <input
                         type="text"
@@ -62,10 +65,12 @@ function Form({getItems}) {
                         onChange={(event) => setnewItemUnit(event.target.value)}
                     ></input>
                 </label>
-                <button>
+                </div>
+                <button className='btn btn-primary'>
                     Save
                 </button>
             </form>
+            </div>
         </>
     )
 }

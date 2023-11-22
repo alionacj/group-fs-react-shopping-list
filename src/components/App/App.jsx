@@ -32,9 +32,9 @@ function App() {
     }
     
     return (
-        <div className="App">
+        <div className="container">
             <Header />
-            <Form getItems = {getItems}/>
+            <div className="container"><Form getItems = {getItems}/></div>
             <List listItems = {listItems} getItems = {getItems} />
         </div>
     );
