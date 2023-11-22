@@ -34,7 +34,7 @@ function App() {
     return (
         <div className="App">
             <Header />
-            <Form />
+            <Form getItems = {getItems}/>
             <List listItems = {listItems} />
         </div>
     );
