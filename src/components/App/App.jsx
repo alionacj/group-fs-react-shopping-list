@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios'
 import Header from '../Header/Header.jsx'
+import Form from '../Form/Form.jsx';
 import List from '../List/List.jsx';
 import './App.css';
 
@@ -33,6 +34,7 @@ function App() {
     return (
         <div className="App">
             <Header />
+            <Form />
             <List listItems = {listItems} />
         </div>
     );

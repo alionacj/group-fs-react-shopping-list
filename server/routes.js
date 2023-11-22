@@ -19,4 +19,27 @@ router.get('/', (req, res) => {
     })
 })
 
+router.post('/', (req, res) => {
+    const item = req.body
+    const sqlText =
+    `
+        INSERT INTO shoppinglist ("name", "quantity", "unit")
+        VALUES ($1, $2, $3);
+    `
+    const sqlValues = [
+        item.name,
+        item.quantity,
+        item.unit
+    ]
+    console.log(sqlValues)
+    pool.query(sqlText, sqlValues)
+        .then((dbResult) => {
+            res.sendStatus(201)
+        })
+        .catch((dbError) => {
+            console.error(dbError)
+            res.sendStatus(500)
+        })
+})
+
 module.exports = router
