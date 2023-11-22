@@ -2,6 +2,7 @@ import './List.css'
 import ResetButton from '../ResetButton/ResetButton'
 import ClearButton from '../ClearButton/ClearButton'
 import RemoveButton from '../RemoveButton/RemoveButton'
+import PurchaseButton from '../PurchaseButton/PurchaseButton'
 
 function List({listItems, getItems}) {
 
@@ -15,6 +16,7 @@ function List({listItems, getItems}) {
                 <p>{item.name}</p>
                 <p>{item.quantity}</p>
                 <p>{item.unit}</p>
+                <PurchaseButton id = {item.id} getItems={getItems} isPurchased={item.isPurchased}/>
                 <RemoveButton id = {item.id} getItems={getItems}/>
 
                 </div>

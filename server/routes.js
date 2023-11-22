@@ -41,6 +41,7 @@ router.post('/', (req, res) => {
         })
 })
 
+// route to reset all
 router.put('/', (req,res) => {
     const sqlText = 
         `
@@ -58,7 +59,30 @@ router.put('/', (req,res) => {
         .catch((dbError) => {
             res.sendStatus(500)
         })
+})
 
+// route to purchase
+router.put('/:id', (req,res) => {
+    let id = req.params.id;
+    const sqlText = 
+        `
+        UPDATE shoppinglist 
+        SET "isPurchased" = $1
+        WHERE id = $2;
+        `
+    const sqlValues = [
+        "TRUE",
+        id
+    
+    ]
+
+    pool.query(sqlText, sqlValues)
+        .then((dbResult) => {
+            res.sendStatus(200)
+        })
+        .catch((dbError) => {
+            res.sendStatus(500)
+        })
 })
 
 //route to delete all items

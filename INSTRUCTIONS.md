@@ -22,7 +22,7 @@ Each item can have a:
 
 [X] When the page first loads, all the existing items should be displayed with the quantity & unit combined together for display.
 [X] Each item should also have an option to remove it from the list 
-[ ] or mark it as purchased. Once purchased, the buttons should be hidden and the item should show as "Purchased". 
+[X] or mark it as purchased. Once purchased, the buttons should be hidden and the item should show as "Purchased". 
 
 [X] Items should initially appear alphabetically, 
 [X] but as items are marked purchased they should sort to the end of the list.
