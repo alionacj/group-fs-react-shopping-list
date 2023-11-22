@@ -27,8 +27,8 @@ Each item can have a:
 [X] Items should initially appear alphabetically, 
 [X] but as items are marked purchased they should sort to the end of the list.
 
-[ ] The `Reset` button should clear the purchased status from all items, allowing the list to be re-used.
-[ ] mThe `Clear` button should remove all items from the list, deleting them from the database.
+[X] The `Reset` button should clear the purchased status from all items, allowing the list to be re-used.
+[X] mThe `Clear` button should remove all items from the list, deleting them from the database.
 
 #### Hint for Marking as purchased/removing item
 >> If you've set up your components as we have shown, you should have an `Item` Component. That item should have access to every property of the item *object* -- this will be critical to successfully calling a PUT or DELETE route with the id (`/:id`). 

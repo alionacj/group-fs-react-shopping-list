@@ -61,4 +61,21 @@ router.put('/', (req,res) => {
 
 })
 
+router.delete('/', (req,res) => {
+    const sqlText = 
+    `
+    DELETE FROM shoppinglist;
+    `
+
+    pool.query(sqlText)
+        .then((dbResult) => {
+            res.sendStatus(200)
+        })
+        .catch((dbError) => {
+            console.log(dbError);
+            res.sendStatus(500)
+        })
+}
+)
+
 module.exports = router

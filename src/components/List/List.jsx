@@ -1,5 +1,6 @@
 import './List.css'
 import ResetButton from '../ResetButton/ResetButton'
+import ClearButton from '../ClearButton/ClearButton'
 
 function List({listItems, getItems}) {
 
@@ -7,7 +8,7 @@ function List({listItems, getItems}) {
         <>
             <h2>Shopping List</h2>
             <ResetButton getItems = {getItems}/>
-            <button>Clear</button>
+            <ClearButton getItems = {getItems}/>
             {listItems.map(item => (
                 <div key={item.id} className="listBox">
                 <p>{item.name}</p>
