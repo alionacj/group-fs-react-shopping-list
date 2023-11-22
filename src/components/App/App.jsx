@@ -35,7 +35,7 @@ function App() {
         <div className="App">
             <Header />
             <Form getItems = {getItems}/>
-            <List listItems = {listItems} />
+            <List listItems = {listItems} getItems = {getItems} />
         </div>
     );
 }

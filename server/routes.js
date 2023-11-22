@@ -31,7 +31,6 @@ router.post('/', (req, res) => {
         item.quantity,
         item.unit
     ]
-    console.log(sqlValues)
     pool.query(sqlText, sqlValues)
         .then((dbResult) => {
             res.sendStatus(201)
@@ -40,6 +39,26 @@ router.post('/', (req, res) => {
             console.error(dbError)
             res.sendStatus(500)
         })
+})
+
+router.put('/', (req,res) => {
+    const sqlText = 
+        `
+        UPDATE shoppinglist 
+        SET "isPurchased" = $1;
+        `
+    const sqlValues = [
+        "FALSE"
+    ]
+
+    pool.query(sqlText, sqlValues)
+        .then((dbResult) => {
+            res.sendStatus(200)
+        })
+        .catch((dbError) => {
+            res.sendStatus(500)
+        })
+
 })
 
 module.exports = router

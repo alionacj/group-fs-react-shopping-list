@@ -1,10 +1,12 @@
 import './List.css'
+import ResetButton from '../ResetButton/ResetButton'
 
-function List({listItems}) {
+function List({listItems, getItems}) {
+
     return (
         <>
             <h2>Shopping List</h2>
-            <button>Reset</button>
+            <ResetButton getItems = {getItems}/>
             <button>Clear</button>
             {listItems.map(item => (
                 <div key={item.id} className="listBox">
